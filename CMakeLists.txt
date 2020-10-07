@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(./include/)
 
-add_executable(my_logger src/main.c)
+add_executable(my_logger include/my_logger.h src/init.c tests/test_init.c)
+target_link_libraries(my_logger criterion)
