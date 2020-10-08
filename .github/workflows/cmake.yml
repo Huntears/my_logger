@@ -14,7 +14,7 @@ jobs:
     # See: https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow#configuring-a-build-matrix
     runs-on: ubuntu-latest
     container:
-      image: epitechcontent/epitest-docker:latest
+      image: nheuillet/docker-epitech-c:latest
 
     steps:
     - uses: actions/checkout@v2
