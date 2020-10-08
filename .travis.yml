@@ -31,11 +31,11 @@ jobs:
       install:
         - docker pull nheuillet/docker-epitech-c
       script:
-        - docker run -v $PWD:/build epitechcontent/epitest-docker bash -c "cd build && mkdir build && cd build && cmake .. && make"
+        - docker run -v $PWD:/build nheuillet/docker-epitech-c bash -c "cd build && mkdir build && cd build && cmake .. && make"
     - stages: tests
       name: "Tests"
       if: type != cron
       install:
         - docker pull nheuillet/docker-epitech-c
       script:
-        - docker run -v $PWD:/build epitechcontent/epitest-docker bash -c "cd build && mkdir build && cd build && cmake .. && make && ./my_logger"
+        - docker run -v $PWD:/build nheuillet/docker-epitech-c bash -c "cd build && mkdir build && cd build && cmake .. && make && ./my_logger"
