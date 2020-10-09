@@ -7,6 +7,9 @@
 
 #include "my_logger.h"
 
+/// \brief Implementation of strdup
+/// \param str The string to duplicate
+/// \return The duplicated string
 char *my_strdup(char const *str)
 {
     char *dest = NULL;

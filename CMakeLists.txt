@@ -5,5 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(./include/)
 
-add_executable(my_logger include/my_logger.h src/init.c tests/test_init.c src/utility/my_strlen.c src/utility/my_strdup.c src/utility/my_strcpy.c)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
+
+add_executable(my_logger include/my_logger.h src/init.c tests/test_init.c src/utility/my_strlen.c src/utility/my_strdup.c src/utility/my_strcpy.c src/destroy.c tests/test_destroy.c)
 target_link_libraries(my_logger criterion)

@@ -14,6 +14,13 @@
 #define LOG_DEBUG     0b00001000
 #define LOG_UNDEFINED 0b11110000
 
+#define SAFE_FREE(ptr) if (ptr) \
+                        free(ptr);
+
+#define SAFE_CLOSE(fd) if (fd > 0) \
+                        close(fd);
+
+
 typedef struct logger_s {
     bool append;
     bool print_to_stdout;
@@ -23,6 +30,7 @@ typedef struct logger_s {
 } logger_t;
 
 logger_t *init_logger(char *filename, bool append, bool print_to_stdout, bool print_to_file);
+void destroy_logger(logger_t *logger);
 
 // Utility
 int my_strlen(char const *str);
