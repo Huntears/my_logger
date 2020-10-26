@@ -15,9 +15,10 @@ static void redirect_all_stdout(void)
 
 TestSuite(suite_log,
           .timeout=10,
-          .description="Tests for the logger");
+          .description="Tests for the logger",
+          .init=redirect_all_stdout);
 
-Test(suite_log, print_stdout_no_file_no_flag, .init=redirect_all_stdout)
+Test(suite_log, print_stdout_no_file_no_flag)
 {
     logger_t *logger = init_logger(NULL, false, true, false);
 
