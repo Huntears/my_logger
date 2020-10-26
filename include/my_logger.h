@@ -8,11 +8,13 @@
 #include <sys/types.h>
 #include <stdbool.h>
 
-#define LOG_INFO      0b00000001
-#define LOG_WARNING   0b00000010
-#define LOG_ERROR     0b00000100
-#define LOG_DEBUG     0b00001000
-#define LOG_UNDEFINED 0b11110000
+enum log_flags {
+    log_info = 1,
+    log_warning = 1 << 1,
+    log_error = 1 << 2,
+    log_debug = 1 << 3,
+    log_undefined = 15 << 4
+};
 
 #define SAFE_FREE(ptr) if (ptr) \
                         free(ptr);
