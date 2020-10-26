@@ -13,7 +13,6 @@ enum log_flags {
     log_warning = 1 << 1,
     log_error = 1 << 2,
     log_debug = 1 << 3,
-    log_undefined = 15 << 4
 };
 
 #define SAFE_FREE(ptr) if (ptr) \
@@ -33,10 +32,12 @@ typedef struct logger_s {
 
 logger_t *init_logger(char *filename, bool append, bool print_to_stdout, bool print_to_file);
 void destroy_logger(logger_t *logger);
+void log_msg(logger_t *logger, char *msg, int log_flags);
 
 // Utility
 int my_strlen(char const *str);
 char *my_strdup(char const *str);
 void my_strcpy(char *dest, char const *src);
+void my_fputstr(char const *str, int fd);
 
 #endif //MY_LOGGER_MY_LOGGER_H
