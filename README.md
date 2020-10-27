@@ -4,3 +4,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/huntears/my_logger/badge)](https://www.codefactor.io/repository/github/huntears/my_logger)
 
 Useful and simple logger for Epitech standards in C
+
+For now it "***works***", but it's not tested well and not all features are implemented.
+And yes it's in this state because I really am just way to lazy to do it :).²
