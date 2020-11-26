@@ -6,4 +6,4 @@
 Useful and simple logger for Epitech standards in C
 
 For now it "***works***", but it's not tested well and not all features are implemented.
-And yes it's in this state because I really am just way to lazy to do it :).²
+And yes it's in this state because I really am just way too lazy to do it :).
